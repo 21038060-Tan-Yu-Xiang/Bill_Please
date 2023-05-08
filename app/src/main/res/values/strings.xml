@@ -12,4 +12,5 @@
     <string name="enter_amount">enter amount…</string>
     <string name="enter_pax">enter pax…</string>
     <string name="calculate">CALCULATE</string>
+    <string name="bill_calculator">Bill Calculator</string>
 </resources>

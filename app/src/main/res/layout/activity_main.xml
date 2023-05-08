@@ -5,43 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/bill"
+        android:fontFamily="@font/hf"
+        android:text="@string/bill_calculator"
+        android:textSize="50sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="@string/amount"
+        android:fontFamily="@font/hf"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvAmount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/amount" />
+    <EditText
+        android:id="@+id/etnAmount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_amount"
+        android:inputType="numberDecimal" />
 
-        <EditText
-            android:id="@+id/etnAmount"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:ems="10"
-            android:hint="@string/enter_amount"
-            android:inputType="numberDecimal"
-            android:autofillHints="" />
+    <TextView
+        android:id="@+id/tvPax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/num_of_pax"
+        android:fontFamily="@font/hf"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvPax"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/num_of_pax" />
-
-        <EditText
-            android:id="@+id/etnPax"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:ems="10"
-            android:hint="@string/enter_pax"
-            android:inputType="number"
-            android:autofillHints="" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/etnPax"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_pax"
+        android:inputType="number" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,25 +78,28 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tvDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/discount"
+        android:fontFamily="@font/hf"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etnDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_discount"
+        android:inputType="numberDecimal" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvDiscount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/discount" />
-
-        <EditText
-            android:id="@+id/etnDiscount"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:ems="10"
-            android:hint="@string/enter_discount"
-            android:inputType="numberDecimal"
-            android:autofillHints="" />
 
         <RadioGroup
             android:id="@+id/rgPaymentMethod"
@@ -99,11 +113,23 @@
                 android:layout_height="wrap_content"
                 android:text="@string/cash" />
 
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/cash" />
+
             <RadioButton
                 android:id="@+id/rbtnPayNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/paynow" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="94dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/paynow" />
         </RadioGroup>
 
     </LinearLayout>
@@ -117,15 +143,21 @@
             android:id="@+id/btnCalculate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/calculate"
-            android:layout_weight="1"/>
+            android:textColor="@color/black"
+            app:backgroundTint="#000000"
+            android:background="@drawable/emptybutton"/>
 
         <Button
             android:id="@+id/btnReset"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/reset"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            app:backgroundTint="#000000"
+            android:background="@drawable/emptybutton"/>
     </LinearLayout>
 
     <TextView
